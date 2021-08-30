@@ -1,22 +1,26 @@
 <?php
 include('config.php');
-$username = $_POST['uname'];
+$roll = $_POST['roll'];
 $password = $_POST['psw'];
         //to prevent from mysqli injection
-        $username = stripcslashes($username);
+        $roll = stripcslashes($roll);
         $password = stripcslashes($password);
-        $username = mysqli_real_escape_string($con, $username);
+        $roll = mysqli_real_escape_string($con, $roll);
         $password = mysqli_real_escape_string($con, $password);
-
-        $sql = "SELECT * FROM users WHERE username = '$username' AND password = MD5('$password')";
+        //
+        //MySQL
+        $sql = "SELECT * FROM users WHERE roll = '$roll' AND password = MD5('$password')";
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
 
         if($count > 0)
         {
-            setcookie('lin', md5($password), time() + (10 * 365 * 24 * 60 * 60), '/ish-cool; samesite=strict; secure=true; httponly=true'); // cookie securitites
-           header("Location: dashboard.php");
+            $t = time()+rand();
+            $up = "UPDATE users SET lin=$t,present=1 WHERE roll=$roll";
+            setcookie('lin', $t, time()+(10*365*24*60*60), '/iskul; samesite=strict; secure=true; httponly=true');
+            mysqli_query($con,$up);
+            header("Location: dashboard.php");
 
         }
         else{
