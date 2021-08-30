@@ -1,6 +1,5 @@
 <?php
 $host='localhost'; //hostname, most probably 'localhost'
-// hope you'll understand
 $username='';
 $password='';
 $dbname = '';
