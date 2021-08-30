@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_COOKIE['d'])) {
-	echo "Bruh, you've already participated😑";
+	echo "Exam not available";
 	echo "<br>";
 	echo "<a href='dashboard.php'>Dashboard</a>";
 }

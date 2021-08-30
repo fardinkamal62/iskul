@@ -1,8 +1,8 @@
 <?php
 setcookie("d","y",time() + 3600);
 include("config.php");
-$pass = $_COOKIE['lin'];
-$sql = "SELECT * FROM users WHERE password = '$pass'";
+$lin = $_COOKIE['lin'];
+$sql = "SELECT * FROM users WHERE lin = '$lin'";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $mark = $row['mark'];
@@ -58,7 +58,7 @@ else{
             if ($ans3 == $s3) { $totalCorrect++; }
             if ($ans4 == $s4) { $totalCorrect++; }
             if ($ans5 == $s5) { $totalCorrect++; }
-$m_up = "UPDATE `users` SET `mark` = $totalCorrect WHERE `users`.`password` = $pass";
+$m_up = "UPDATE `users` SET `mark` = $totalCorrect WHERE `lin` = $lin";
 if (mysqli_query($con, $m_up)) {
 	echo "Thanks for participating in the exam";
 }

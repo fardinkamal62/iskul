@@ -4,12 +4,12 @@ include("config.php");
 if(isset($_COOKIE['lin'])){
   echo "<a href='logout.php'>Logout</a>";
   echo "<br>";
-  $pass = $_COOKIE['lin'];
-  $sql = "SELECT * FROM users WHERE password = '$pass'";
+  $lin = $_COOKIE['lin'];
+  $sql = "SELECT * FROM users WHERE lin = '$lin'";
   $result = mysqli_query($con, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
   $desig = $row['desig'];
-  $name = $row['Name'];
+  $name = $row['name'];
 
   if ($desig == "stud") {
     echo "Hello $name, wait exam will start not-shortly:)";
@@ -50,13 +50,7 @@ setInterval(updateTime, 1000);
 </script>
 <body>
 <h2>Current time <span id='time_span'></span></h2>
-<h1>Hello $name,</h1>
 
-<p>Your exam will start at 1:10 for 30 minutes(1:40) GMT+6</p>
-<p>You'll get question paper just in time</p>
-<p>Have a nice day😊</p>
-</body>
-</html>
 EOL;
 }
 else {
