@@ -44,11 +44,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`name`, `password`, `desig`, `present`, `sroll`, `eroll`, `roll`, `lin`, `mark`) VALUES
-('', '', 'pric', 1, 2, 5, 1, 2673368299, 0),
-('', '', 'stud', 1, NULL, NULL, 2, 1689605656, 0),
-('', '', 'stud', 0, NULL, NULL, 3, 1, 0),
-('', '', 'stud', 0, NULL, NULL, 4, 0, 0),
-('', '', 'gteach', 1, 3, 4, 5, 3009288940, 0);
+('', MD5(''), 'pric', 1, 2, 5, 1, 0, 0),
+('', MD5(''), 'stud', 1, NULL, NULL, 2, 0, 0),
+('', MD5(''), 'stud', 0, NULL, NULL, 3, 1, 0),
+('', MD5(''), 'stud', 0, NULL, NULL, 4, 0, 0),
+('', MD5(''), 'gteach', 1, 3, 4, 5, 0, 0);
 
 --
 -- Indexes for dumped tables
