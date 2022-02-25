@@ -6,7 +6,9 @@ if(isset($_COOKIE['lin'])){
     $sql = "SELECT * FROM users WHERE lin = '$lin'";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
+    
+    if(empty($row['name'])){header("Location: logout.php");}; // auto logout if logged in from another device
+    
     $name = $row['name'];
 
     echo "<a href='logout.php'>Logout</a>";
