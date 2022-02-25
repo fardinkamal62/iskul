@@ -2,14 +2,15 @@
 include("config.php");
 
 if(isset($_COOKIE['lin'])){
-  echo "<a href='logout.php'>Logout</a>";
-  echo "<br>";
   $lin = $_COOKIE['lin'];
   $sql = "SELECT * FROM users WHERE lin = '$lin'";
   $result = mysqli_query($con, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+  if(empty($row['name'])){header("Location: logout.php");}; // auto logout if logged in from another device
   $desig = $row['desig'];
   $name = $row['name'];
+  echo "<a href='dashboard.php'>Dashboard</a>";
+  echo "<br>";
 
   if ($desig == "stud") {
     echo "Hello $name, wait exam will start not-shortly:)";
