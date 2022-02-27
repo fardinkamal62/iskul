@@ -12,7 +12,7 @@ I cordially welcome someone to do the front-end part
 
 
 
-## Usage
+## Live Demo
 You can log into the portal as Student/Principal/Teacher using these credentials:
 
 
@@ -24,3 +24,10 @@ Student       | 2     | fardin
   ,,          | 4     | evan
 Teacher       | 10    | ripon
   ,,          | 11    | ns
+
+
+## Feature Request
+Open a new issue
+
+## Work to be done
+Full website's front-end. Back-end also appreciated
