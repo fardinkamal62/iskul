@@ -6,9 +6,9 @@ I cordially welcome someone to do the front-end part
 
 
 ## Features
-+ ##### Principal: Principal can see attendance of all teacher and student and also participate in class
-+ ##### Teachers: Teachers can participate in class and can only see their students attendance
-+ ##### Students: Students can participate in class and exam
++  Principal: Principal can see attendance of all teacher and student, also participate in class
++  Teachers: Teachers can participate in class and can only see their students attendance
++  Students: Students can participate in class and exam
 
 
 
@@ -29,5 +29,5 @@ Teacher       | 10    | ripon
 ## Feature Request
 Open a new issue
 
-## Work to be done
-Full website's front-end. Back-end also appreciated
+## What's not working
+Exam and result features
