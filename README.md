@@ -1,5 +1,5 @@
 # Iskul
-A replica of my college's class room portal with added features and far better than the them.
+A replica of my college's class room portal where schools can take classes, exams. If you're familiar with online.udvash.com or edulive.edu-smart.info, this is exactly like them. I wrote it from scratch using PHP on server side and mysql database.
 
 I just did the back-end part. I don't know much HTML, CSS as you can see.
 I cordially welcome someone to do the front-end part
